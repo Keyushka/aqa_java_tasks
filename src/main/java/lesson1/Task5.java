@@ -6,10 +6,15 @@ package lesson1;
  */
 public class Task5 {
     public static void main(String[] args) {
-        //System.out.println(reverse("Hello world!!!"));
+        System.out.println(reverse("Hello world!!!"));
     }
 
     public static String reverse(String str) {
-        return "";
+        String strRev = "";
+        char[] arr = str.toCharArray(); // Преобразуем строку str в массив символов (char)
+        for (int i = arr.length-1; i >= 0; i--) {
+            strRev = strRev + arr[i];
+        }
+        return strRev;
     }
 }
