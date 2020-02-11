@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="MY suite">
+    <test name = "TestForTask2">
+        <parameter name="NumberOfRows" value="5"/>
+        <parameter name="NumberOfWords" value="10"/>
+        <classes>
+            <class name = "TestTask2">
+                <methods>
+                    <exclude name="checkRows"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!--<parameter name="NumberOfRows" value="5">
+        <parameter name="NumberOfWords" value="10"/>
+        <test name="TestForTask2">
+            <classes>
+                <class name="test.java.TestTask1"/>
+                <class name="test.java.TestTask2">
+                    <methods>
+                        <exclude name="checkRows"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+    </parameter>-->
+</suite>
