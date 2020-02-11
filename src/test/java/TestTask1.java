@@ -2,16 +2,17 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static lesson1.Task1.min;
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 
-public class TestsHW {
+public class TestTask1 {
 
 
     @Test(dataProvider = "provider")
     public void checkMinOf3(int value, int expected, String str) {
         System.out.println(str);
-        assertTrue(value == expected, String.format("Expected %d to be equal %d", expected, value));
+        assertEquals(expected, value, String.format("Expected %d to be equal %d", expected, value));
     }
 
 
@@ -24,4 +25,5 @@ public class TestsHW {
                 {min(10, 0, 20), 0, "Fourth"},
         };
     }
+
 }
