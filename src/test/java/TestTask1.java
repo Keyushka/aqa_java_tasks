@@ -15,10 +15,11 @@ public class TestTask1 {
     }
 
 
-    @Test(dataProvider = "provider")
-    public void checkMinOf3(int value, int expected, String str) {
+    @Test(dataProvider = "provider", priority = 1)
+    public void checkMinOf3(int actualValue, int expectedValue, String str) {
         System.out.println(str);
-        assertEquals(expected, value, String.format("Expected %d to be equal %d", expected, value));
+        assertEquals(expectedValue, actualValue,
+                String.format("Expected %d to be equal %d", expectedValue, actualValue));
     }
 
 

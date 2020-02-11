@@ -17,9 +17,9 @@ public class TestTask2 {
     }
 
 
-    @Test (priority = 1)
+    @Test (priority = 2)
     @Parameters({"NumberOfRows", "NumberOfWords"})
-    public static void checkRows(@Optional int NumberOfRows, int NumberOfWords) {
+    public static void checkRows(@Optional ("5") int NumberOfRows, @Optional("10") int NumberOfWords) {
         //несколько часов потратила чтоб разобаться с @Optional, но не заработало. без параметризации - работает
         String test_str = Task2.writeName();
         String[] test_arr = test_str.split("\n");
