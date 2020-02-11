@@ -1,12 +1,18 @@
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import static lesson1.Task1.min;
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
 
 public class TestTask1 {
+
+    @BeforeClass // выполнится один раз перед классом
+    public void start(){
+        System.out.println("----------------------------------");
+        System.out.println("Starting test for Task1");
+    }
 
 
     @Test(dataProvider = "provider")

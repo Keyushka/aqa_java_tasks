@@ -11,10 +11,10 @@ import java.io.StringWriter;
 
 public class Task2 {
 
+
     public static void main(String[] args) {
         writeName();
     }
-
 
     public static String writeName() {
         StringWriter sw = new StringWriter();
@@ -29,6 +29,8 @@ public class Task2 {
         }
         return sw.toString();
     }
+
+
 
     /*public static void name() {
         String ir = "Irina";
